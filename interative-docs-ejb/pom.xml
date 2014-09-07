@@ -13,6 +13,30 @@
 
 	<name>${parent.name} - Services SPI</name>
 
+	<dependencies>
+
+		<dependency>
+			<groupId>br.com.startup</groupId>
+			<artifactId>interative-docs-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>jsr311-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+		</dependency>
+
+	</dependencies>
+
 	<build>
 
 		<plugins>
@@ -22,6 +46,15 @@
 				<version>2.3</version>
 				<configuration>
 					<ejbVersion>3.1</ejbVersion>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+
+				<configuration>
+					<skip>true</skip>
 				</configuration>
 			</plugin>
 

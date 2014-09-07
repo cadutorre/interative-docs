@@ -1,14 +1,16 @@
-<html ng-app>
+<html ng-app="docs">
 <head>
 <script src="js/angular.min.js"></script>
+<script src="js/controllers.js"></script>
 </head>
-<body>
+<body ng-controller="leo">
 	<div>
 		<label>Name:</label>
 		<input type="text" ng-model="yourName" placeholder="Enter a name here">
 		<hr>
 		<h1>Hello {{yourName}}!</h1>
 	</div>
+
 	<div ng-init="descricao='inicio'">
 		<textarea ng-model="descricao">{{descricao}}</textarea>
 	</div>
@@ -18,5 +20,11 @@
 		<button ng-disabled=" descricao.length < 10">Enviar</button>
 
 	</div>
+
+	<hr>
+
+	<ul>
+		<li ng-repeat="meta in metas">{{meta.nome}}</li>
+	</ul>
 </body>
 </html>

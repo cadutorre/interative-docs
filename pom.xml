@@ -15,6 +15,7 @@
 		<module>interative-docs-ejb</module>
 		<module>interative-docs-web</module>
 		<module>interative-docs-ear</module>
+		<module>interative-docs-infra</module>
 	</modules>
 
 	<properties>
@@ -24,6 +25,13 @@
 
 	<dependencyManagement>
 		<dependencies>
+
+			<dependency>
+				<groupId>br.com.startup</groupId>
+				<artifactId>interative-docs-infra</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<type>jar</type>
+			</dependency>
 
 			<dependency>
 				<groupId>br.com.startup</groupId>
@@ -45,6 +53,24 @@
 				<version>1.0-SNAPSHOT</version>
 				<type>war</type>
 				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.ws.rs</groupId>
+				<artifactId>jsr311-api</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.persistence</groupId>
+				<artifactId>persistence-api</artifactId>
+				<version>1.0.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.ejb</groupId>
+				<artifactId>ejb-api</artifactId>
+				<version>3.0</version>
 			</dependency>
 
 			<!-- Test dependencies -->
@@ -73,6 +99,39 @@
 						<source>1.6</source>
 						<target>1.6</target>
 					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.flywaydb</groupId>
+					<artifactId>flyway-maven-plugin</artifactId>
+					<version>3.0</version>
+
+					<configuration>
+
+						<url>jdbc:mysql://localhost:3306/west3</url>
+						<user>root</user>
+						<password>root</password>
+
+						<schemas>
+							<schema>interative-docs</schema>
+						</schemas>
+
+						<locations>
+							<location>filesystem:/sql</location>
+						</locations>
+
+					</configuration>
+
+					<dependencies>
+
+						<dependency>
+							<groupId>mysql</groupId>
+							<artifactId>mysql-connector-java</artifactId>
+							<version>5.1.6</version>
+						</dependency>
+
+					</dependencies>
+
 				</plugin>
 
 			</plugins>

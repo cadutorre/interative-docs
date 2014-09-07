@@ -14,4 +14,31 @@
 
 	<name>${parent.name} - Services API</name>
 
+	<dependencies>
+
+		<dependency>
+			<groupId>br.com.startup</groupId>
+			<artifactId>interative-docs-infra</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>

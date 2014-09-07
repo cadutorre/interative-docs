@@ -1,6 +1,6 @@
 START-UP CHURROS!
 
-	Iniciativa para desenvolvimento de sistema de controle para documentação interativa,
+    Iniciativa para desenvolvimento de sistema de controle para documentação interativa,
 com as seguintes características:
 
 	- Módulos: API, EJB, WAR e EAR;
