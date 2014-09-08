@@ -1,10 +1,6 @@
-START-UP CHURROS!
+COMMIT SERVIÇO INICIAL
 
-    Iniciativa para desenvolvimento de sistema de controle para documentação interativa,
-com as seguintes características:
-
-	- Módulos: API, EJB, WAR e EAR;
-	- Backend em REstFul em Java EE 6;
-	- Frontend em Angular JS e Bootstrap;
-
-Obrigado!
+- criação do primeiro serviço: listagem de metas
+- busca das metas via angular e criação dos controlers em js
+- configuração do plugin do maven flyway e criação da tabela tab_meta
+- criação do pacote infraestrutura e adição das exceptions
