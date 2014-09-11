@@ -1,11 +1,11 @@
-package br.com.startup.service;
+package br.com.startup.facade;
 
 import java.io.Serializable;
 import java.util.List;
 
 import br.com.startup.exception.InterativeDocsException;
 
-public interface SimpleService<T> extends Serializable {
+public interface SimpleFacade<T> extends Serializable {
 
 	void salvar(T t) throws InterativeDocsException;
 

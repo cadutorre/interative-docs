@@ -23,7 +23,7 @@
 
 		<dependency>
 			<groupId>br.com.startup</groupId>
-			<artifactId>interative-docs-ejb</artifactId>
+			<artifactId>interative-docs-requisitos</artifactId>
 			<type>ejb</type>
 		</dependency>
 

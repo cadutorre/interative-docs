@@ -1,4 +1,4 @@
-package br.com.startup.service;
+package br.com.startup.facade.meta;
 
 import java.io.Serializable;
 
